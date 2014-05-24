@@ -1,0 +1,45 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div class="content-wrapper">
+
+		<br><br>
+
+		<div class="row bottom double">
+			<div class="columns text-center small-12">
+				<h1 class="article-h1">{{page_title}}</h1>
+			</div>
+		</div>
+
+		{% for field in fields %}
+		<div class="field">
+			{% include "_field-form.twig" with { 'panel_id' : field.ID } %}
+		</div>
+		{% endfor %}
+
+		{% if fields|length == 0 %}
+		<div class="new-field">
+			{% include "_field-form.twig" with { 'active' : 'active' } %}
+		</div>
+		{% endif %}
+
+		<div class="field-matrix hide">
+			{% include "_field-form.twig" with { 'active' : 'active' } %}
+		</div>
+
+
+		<div class="row">
+
+			<div class="small-12 text-right columns">
+				<button class="button primary-dark">Adicionar Campo</button>
+			</div>
+		</div>
+				
+
+
+
+
+	</div> <!-- /content-wrapper -->
+
+{% endblock %}
