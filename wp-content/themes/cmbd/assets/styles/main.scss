@@ -98,11 +98,11 @@ button.gray, .button.gray {
 .type {
 
     .categories {
-        // display: none;
+        display: none;
     }
 
 
-    &.category {
+    &.categoria {
 
         .categories {
             display: block;
@@ -118,7 +118,7 @@ button.gray, .button.gray {
     }
 
 
-    &.yes {
+    &.sim {
 
         .incise {
             display: block;

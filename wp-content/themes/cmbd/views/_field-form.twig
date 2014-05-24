@@ -1,132 +1,134 @@
-			<div class="row bottom">
+<div class="field {{hide}}" style="{{style}}">
+	<div class="row bottom">
 
-				<form method="post" action="{{bloginfo('home')}}/field/add">
+		<form method="post" action="{{bloginfo('home')}}/field/add">
 
-					<input type="hidden" name="bd_id" value="{{bdid}}">
-					<input type="hidden" name="field_id" value="{{field.ID}}">
+			<input type="hidden" name="bd_id" value="{{bdid}}">
+			<input type="hidden" name="field_id" value="{{field.ID}}">
 
-					<div class="columns small-12">
-						
-						<dl class="accordion" data-accordion>
-						  <dd class="{{active}}">
-						    <a href="#panel{{panel_id}}">
-						    	{% if field %}
-						    		Campo: {{field.post_title}}
-						    	{% else %}
-						    		Novo Campo
-						    	{% endif %}
-						    	<em class="unsaved">Este campo ainda não foi salvo</em>
-						    </a>
-						    <div id="panel{{panel_id}}" class="content panel_id {{active}}">
+			<div class="columns small-12">
+				
+				<dl class="accordion" data-accordion>
+					<dd class="{{active}}">
+						<a href="#panel{{panel_id}}">
+							{% if field %}
+								{{field.post_title}}
+							{% else %}
+								Novo Campo
+							{% endif %}
+							<em class="unsaved">Este campo ainda não foi salvo</em>
+						</a>
+						<div id="panel{{panel_id}}" class="content panel_id {{active}}">
 
-						    	<div class="panel radius">
+							<div class="panel radius">
 
-									<div class="row">
-										<div class="small-2 columns">
-											<label for="right-label" class="right">Nome do Arquivo</label>
-										</div>
-										<div class="small-10 columns">
-											<input type="text" name="filename" placeholder="" value="{{field.post_title}}">
-										</div>
+								<div class="row">
+									<div class="small-2 columns">
+										<label for="right-label" class="right">Nome do Arquivo</label>
 									</div>
-									<div class="row">
-										<div class="small-2 columns">
-											<label for="right-label" class="right">Nome da variável</label>
-										</div>
-										<div class="small-10 columns">
-											<input type="text" name="varname" placeholder="" value="{{field.varname}}">
-										</div>
+									<div class="small-10 columns">
+										<input type="text" name="filename" placeholder="" value="{{field.post_title}}">
 									</div>
-									<div class="row">
-										<div class="small-2 columns">
-											<label for="right-label" class="right">Descrição da variável</label>
-										</div>
-										<div class="small-10 columns">
-											<input type="text" name="vardescr" placeholder="" value="{{field.vardescr}}">
-										</div>
+								</div>
+								<div class="row">
+									<div class="small-2 columns">
+										<label for="right-label" class="right">Nome da variável</label>
 									</div>
-									<div class="row">
-										<div class="small-2 columns">
-											<label for="right-label" class="right">Fonte</label>
-										</div>
-										<div class="small-10 columns">
-											<input type="text" name="font" placeholder="" value="{{field.font}}">
-										</div>
+									<div class="small-10 columns">
+										<input type="text" name="varname" placeholder="" value="{{field.varname}}">
 									</div>
-									<div class="row type">
-										<div class="small-2 columns">
-											<label for="right-label" class="right">Tipo</label>
-										</div>
-										<div class="small-4 columns">
-											<select name="type" value="{{field.type}}">
-												<option>Escolher...</option>
-												<option value="valor">Valor</option>
-												<option value="text">Texto</option>
-												<option value="categoria">Categoria</option>
-												<option value="outro">Outro</option>
-											</select>
+								</div>
+								<div class="row">
+									<div class="small-2 columns">
+										<label for="right-label" class="right">Descrição da variável</label>
+									</div>
+									<div class="small-10 columns">
+										<input type="text" name="vardescr" placeholder="" value="{{field.vardescr}}">
+									</div>
+								</div>
+								<div class="row">
+									<div class="small-2 columns">
+										<label for="right-label" class="right">Fonte</label>
+									</div>
+									<div class="small-10 columns">
+										<input type="text" name="font" placeholder="" value="{{field.font}}">
+									</div>
+								</div>
+								<div class="row type {{field.type}}">
+									<div class="small-2 columns">
+										<label for="right-label" class="right">Tipo</label>
+									</div>
+									<div class="small-4 columns">
+										<select name="type" value="{{field.type}}">
+											<option>Escolher...</option>
+											<option value="valor">Valor</option>
+											<option value="text">Texto</option>
+											<option value="categoria">Categoria</option>
+											<option value="outro">Outro</option>
+										</select>
 
-										</div>
-										<div class="small-2 columns">
-											<label for="right-label" class="right">Tamanho</label>
-										</div>
-										<div class="small-4 columns">
-											<input type="text" name="size" placeholder="" value="{{field.size}}">
-										</div>
+									</div>
+									<div class="small-2 columns">
+										<label for="right-label" class="right">Tamanho</label>
+									</div>
+									<div class="small-4 columns">
+										<input type="text" name="size" placeholder="" value="{{field.size}}">
+									</div>
 
-										<div class="categories row">
+									<div class="categories row">
 
-											<div class="small-2 columns"></div>
+										<div class="small-2 columns"></div>
 
-											<div class="columns small-10">
+										<div class="columns small-10">
 
-												<div class="row">
+											<div class="row">
 
-													<div class="small-12 columns">
-														<h2>Categorias</h2>
-													</div>
-												</div>
-
-												<div class="row">
-
-													<div class="small-12 columns">
-
-														<div class="panel"> 
-															<div class="row">
-																<div class="small-12 medium-1 columns">Cód</div>
-																<div class="small-12 medium-4 columns">Nome</div>
-																<div class="small-12 medium-6 columns">Descrição</div>
-																<div class="small-12 medium-1 columns"></div>
-															</div>
-
-															<div class="categories">
-
-																{% if field.categories|length == 0 %}
-																	{% include "_field-type-category.php" with { 'index' : 0 } %}
-																{% else %}
-																	{% for category in field.categories %}
-																		{% include "_field-type-category.php" with { 'index' : loop.index } %}
-																	{% endfor %}
-																{% endif %}
-
-															</div>
-
-															{% include "_field-type-category.php" with { 'class' : 'category_matrix hide' } %}
-
-															<div class="row">
-																<div class="small-12 text-right columns">
-																	<button class="tiny">+</button>
-																</div>
-															</div>
-
-														</div>
-													</div>
+												<div class="small-12 columns">
+													<h2>Categorias</h2>
 												</div>
 											</div>
 
+											<div class="row">
+
+												<div class="small-12 columns">
+
+													<div class="panel"> 
+														<div class="row">
+															<div class="small-12 medium-1 columns">Cód</div>
+															<div class="small-12 medium-4 columns">Nome</div>
+															<div class="small-12 medium-6 columns">Descrição</div>
+															<div class="small-12 medium-1 columns"></div>
+														</div>
+
+														<div class="categories-list">
+
+															{% if field.categories|length == 0 %}
+																{% include "_field-type-category.php" with { 'index' : 0 } %}
+															{% else %}
+																{% for category in field.categories %}
+																	{% include "_field-type-category.php" with { 'index' : loop.index } %}
+																{% endfor %}
+															{% endif %}
+
+														</div>
+
+														<div class="row">
+															<div class="small-12 text-right columns">
+																<button class="tiny add">+</button>
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</div>
 										</div>
 
-									<div class="row secrecy">
+									</div>
+								</div>
+
+								<div class="secrecy">
+
+									<div class="row">
 										<div class="small-2 columns">
 											<label for="right-label" class="right">Sigilo</label>
 										</div>
@@ -134,32 +136,36 @@
 											<input type="radio" name="secret" value="nao" checked="true"><label>Não</label>
 											<input type="radio" name="secret" value="sim"><label>Sim</label>
 										</div>
-										
-										<div class="row incise">
-											<div class="small-2 columns">
-												<label for="right-label" class="">Qual inciso?</label>
-											</div>
-											<div class="small-7 columns">
-												<input type="text" name="inciso" placeholder="" value="{{field.inciso}}">
-											</div>
-										</div>
+
 									</div>
 
-									<div class="row"> <br></div>
-
-									<div class="row">
-										<div class="small-12 medium-6 columns"><a href="javascript://" class="alert">Excluir este Campo</a></div>
-										<div class="small-12 medium-6 text-right columns"><button class="button primary">Salvar</button></div>
+									<div class="row incise">
+										<div class="small-2 columns">
+											<label class="right">Qual inciso?</label>
+										</div>
+										<div class="small-10 columns">
+											<input type="text" name="inciso" placeholder="" value="{{field.inciso}}">
+										</div>
 									</div>
 
 								</div>
 
-						    </div>
-						  </dd>
+								<div class="row"> <br></div>
 
-						</dl>
+								<div class="row">
+									<div class="small-12 medium-6 columns"><a href="javascript://" class="alert delete-field">Excluir este Campo</a></div>
+									<div class="small-12 medium-6 text-right columns"><button class="button primary save-field">Salvar</button></div>
+								</div>
 
-					</div>
+							</div>
 
-				</form>
+						</div>
+					</dd>
+
+				</dl>
+
 			</div>
+
+		</form>
+	</div>
+</div>

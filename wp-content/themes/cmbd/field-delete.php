@@ -1,5 +1,5 @@
 <?php
 
-$field_id = $_GET['field_id'];
+$field_id = $_POST['field_id'];
 
 wp_delete_post( $field_id, true );

@@ -12,33 +12,33 @@
 			</div>
 		</div>
 
-		{% for field in fields %}
-		<div class="field">
-			{% include "_field-form.twig" with { 'panel_id' : field.ID } %}
-		</div>
-		{% endfor %}
+		<div class="fields">
 
-		{% if fields|length == 0 %}
-		<div class="new-field">
-			{% include "_field-form.twig" with { 'active' : 'active' } %}
+			{% for field in fields %}
+				{% include "_field-form.twig" with { 'panel_id' : field.ID } %}
+			{% endfor %}
+
+			{% if fields|length == 0 %}
+				{% include "_field-form.twig" with { 'active' : 'active' } %}
+			{% endif %}
+
 		</div>
-		{% endif %}
 
 		<div class="field-matrix hide">
-			{% include "_field-form.twig" with { 'active' : 'active' } %}
+			{% include "_field-form.twig" with { 'active' : 'active', 'style' : 'display: none;' } %}
+		</div>
+
+		<div class="category-matrix hide">
+			{% include "_field-type-category.php" with { 'index' : 0 } %}
 		</div>
 
 
 		<div class="row">
 
 			<div class="small-12 text-right columns">
-				<button class="button primary-dark">Adicionar Campo</button>
+				<button class="button primary-dark add-field">Adicionar Campo</button>
 			</div>
 		</div>
-				
-
-
-
 
 	</div> <!-- /content-wrapper -->
 

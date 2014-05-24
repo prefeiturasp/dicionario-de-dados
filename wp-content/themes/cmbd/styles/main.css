@@ -93,8 +93,12 @@ button.gray, .button.gray {
   content: "-";
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\00003100}}
+.type .categories {
+  display: none;
+}
 @media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\00003107}}
-.type.category .categories {
+.type.categoria .categories {
   display: block;
 }
 
@@ -103,6 +107,6 @@ button.gray, .button.gray {
   display: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\00003123}}
-.secrecy.yes .incise {
+.secrecy.sim .incise {
   display: block;
 }

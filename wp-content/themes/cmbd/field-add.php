@@ -10,6 +10,7 @@ $filename = $_POST['filename'];
 $varname = $_POST['varname'];
 $vardescr = $_POST['vardescr'];
 $font = $_POST['font'];
+$type = $_POST['type'];
 $categories = $_POST['categories'];
 $size = $_POST['size'];
 $secret = $_POST['secret'];
@@ -46,6 +47,7 @@ if($field_id != 0)
 	update_post_meta($field_id,'varname', $varname);
 	update_post_meta($field_id,'vardescr', $vardescr);
 	update_post_meta($field_id,'font', $font);
+	update_post_meta($field_id,'type', $type);
 	update_post_meta($field_id,'categories', $categories);
 	update_post_meta($field_id,'size', $size);
 	update_post_meta($field_id,'secret', $secret);

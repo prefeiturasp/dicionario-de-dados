@@ -30,7 +30,8 @@ $context['fields'] = Timber::get_posts(
  //        'terms' => $context['bdid'])
  //    )
 	'meta_key' => 'bdid',
-	'meta_value' => $context['bdid']
+	'meta_value' => $context['bdid'],
+	'order' => 'ASC'
 	) 
 );
 
