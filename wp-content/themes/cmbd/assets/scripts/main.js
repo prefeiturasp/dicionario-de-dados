@@ -21,12 +21,11 @@ var app = (function(document, $) {
 
 				init : function(field) {
 
-					console.log(field);
-
 					field
 						.on('click','.categories .category button',_bd.category.remove)
 						.on('click','.categories button.add',_bd.category.add)
 						.on('click','.save-field',_bd.field.save)
+						.on('click','.delete-field',_bd.field.delete)
 						.on('change','.row.type select',function(){
 							$(this)
 								.parents('.row.type')[0].className = 'row type ' + this.value;
@@ -36,11 +35,7 @@ var app = (function(document, $) {
 								.parents('.secrecy')[0].className = ' secrecy ' + this.value;
 						})
 						.on('keyup','[name=filename]',_bd.field.title)
-						.on('click','.delete-field',_bd.field.delete)
-						.on('click','.save-field',_bd.field.save)
 						.fadeIn('fast');
-
-					console.log(field);
 
 				},
 
@@ -66,6 +61,8 @@ var app = (function(document, $) {
 				},
 
 				save : function(e) {
+
+					// _bd.saving
 
 					var form = $(this)
 						// .text('Salvando...')
@@ -97,6 +94,8 @@ var app = (function(document, $) {
 
 				delete : function() {
 
+					if (!window.confirm('Deseja deletar este campo?')) {return;}
+
 					var form = $(this).parents('form');
 
 			        $.ajax({
@@ -113,9 +112,8 @@ var app = (function(document, $) {
 					$(this)
 						.parents('.field')
 						.fadeOut('fast',function(){
-							console.log(this);
+							$(this).parents('.field').remove();
 						});
-
 				}
 
 			},
@@ -135,8 +133,6 @@ var app = (function(document, $) {
 				},
 
 				add : function(e) {
-
-					console.log('uai so');
 
 					var html = $('.category-matrix').html();
 
