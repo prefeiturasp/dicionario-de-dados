@@ -15,17 +15,17 @@
 		<div class="fields">
 
 			{% for field in fields %}
-				{% include "_field-form.twig" with { 'panel_id' : field.ID } %}
+				{% include "_field-form.twig" with { 'panel_id' : loop.index } %}
 			{% endfor %}
 
 			{% if fields|length == 0 %}
-				{% include "_field-form.twig" with { 'active' : 'active' } %}
+				{% include "_field-form.twig" with { 'panel_id' : 1 , 'active' : 'active' } %}
 			{% endif %}
 
 		</div>
 
 		<div class="field-matrix hide">
-			{% include "_field-form.twig" with { 'active' : 'active', 'style' : 'display: none;' } %}
+			{% include "_field-form.twig" with { 'active' : 'active', 'style' : 'display: none;', 'panel_id' : '#PANEL_ID#' } %}
 		</div>
 
 		<div class="category-matrix hide">

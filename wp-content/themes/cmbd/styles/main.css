@@ -68,9 +68,10 @@ button.gray, .button.gray {
   margin-bottom: 20px !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000364}}
 .accordion dd > a {
   position: relative;
+  padding: 0.3125rem 1rem;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000368}}
 .accordion dd > a em {

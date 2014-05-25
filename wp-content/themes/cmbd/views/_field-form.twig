@@ -1,7 +1,7 @@
 <div class="field {{hide}}" style="{{style}}">
 	<div class="row bottom">
 
-		<form method="post" action="{{bloginfo('home')}}/field/add">
+		<form method="post" action="{{bloginfo('home')}}/field/add" data-abide>
 
 			<input type="hidden" name="bd_id" value="{{bdid}}">
 			<input type="hidden" name="field_id" value="{{field.ID}}">
@@ -24,10 +24,11 @@
 
 								<div class="row">
 									<div class="small-2 columns">
-										<label for="right-label" class="right">Nome do Arquivo</label>
+										<label for="right-label" class="right"> Nome do Arquivo* </label>
 									</div>
 									<div class="small-10 columns">
-										<input type="text" name="filename" placeholder="" value="{{field.post_title}}">
+										<input type="text" name="filename" placeholder="" value="{{field.post_title}}" required>
+										<small class="error">Este campo é obrigatório</small>
 									</div>
 								</div>
 								<div class="row">
@@ -126,15 +127,15 @@
 									</div>
 								</div>
 
-								<div class="secrecy">
+								<div class="secrecy {{field.secret}}">
 
 									<div class="row">
 										<div class="small-2 columns">
 											<label for="right-label" class="right">Sigilo</label>
 										</div>
 										<div class="small-10 columns">
-											<input type="radio" name="secret" value="nao" checked="true"><label>Não</label>
-											<input type="radio" name="secret" value="sim"><label>Sim</label>
+											<input type="radio" name="secret" value="sim" checked="{{ field.secret == 'sim' }}"><label>Sim</label>
+											<input type="radio" name="secret" value="nao" checked="{{ field.secret == 'nao' or (field.secret is not defined) }}"><label>Não</label>
 										</div>
 
 									</div>

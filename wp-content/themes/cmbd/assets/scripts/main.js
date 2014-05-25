@@ -43,7 +43,10 @@ var app = (function(document, $) {
 
 					$('.fields .field .active').removeClass('active');
 
-					var html = $('.field-matrix').html();
+					var html = $('.field-matrix').html(),
+						panelId = $('.fields .field').length+1;
+
+					html = html.replace(/#PANEL_ID#/g,panelId);
 
 					$('.fields').append(html);
 
@@ -64,11 +67,12 @@ var app = (function(document, $) {
 
 					// _bd.saving
 
-					var form = $(this)
-						// .text('Salvando...')
-						// .addClass('disabled')
-						// .attr('disabled',true)
-						.parents('form');
+					var bt = $(this)
+							.text('Salvando...')
+							.addClass('disabled')
+							.attr('disabled',true),
+						form = bt
+							.parents('form');
 
 			        $.ajax({
 			            type: 'post',
@@ -76,11 +80,15 @@ var app = (function(document, $) {
 			            data: form.serialize(),
 			            success: function (data) {
 
-							console.log('FOI!');
-							console.log(data);
+							form.find('[name=field_id]').val(data);
+
+							bt
+								.text('Salvar')
+								.removeClass('disabled')
+								.attr('disabled',false);
+
 			            }
 			        });
-
 
 					e.preventDefault();
 
@@ -96,7 +104,8 @@ var app = (function(document, $) {
 
 					if (!window.confirm('Deseja deletar este campo?')) {return;}
 
-					var form = $(this).parents('form');
+					var form = $(this).parents('form'),
+						item = form.parents('.field');
 
 			        $.ajax({
 			            type: 'post',
@@ -104,16 +113,25 @@ var app = (function(document, $) {
 			            data: form.serialize(),
 			            success: function () {
 
-							// console.log('FOI!');
-							// console.log(data);
+							item
+								.fadeOut('fast',function(){
+									item.remove();
+
+									if (!$('.fields .field').length) {
+										$('.add-field').click();
+									}
+								});
+
+
+
+			            },
+			            error: function() {
+
+							window.alert('Erro. Favor entrar em contato com o administrador deste site.');
+
 			            }
 			        });
 
-					$(this)
-						.parents('.field')
-						.fadeOut('fast',function(){
-							$(this).parents('.field').remove();
-						});
 				}
 
 			},

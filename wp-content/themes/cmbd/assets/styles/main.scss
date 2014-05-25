@@ -59,11 +59,11 @@ button.gray, .button.gray {
     }
 }
 
-
 .accordion {
     dd {
         > a {
             position: relative;
+            padding: rem-calc(5) rem-calc(16);
 
             em {
                 display: none;
