@@ -7,7 +7,7 @@
 			<input type="hidden" name="field_id" value="{{field.ID}}">
 
 			<div class="columns small-12">
-				
+
 				<dl class="accordion" data-accordion>
 					<dd class="{{active}}">
 						<a href="#panel{{panel_id}}">
@@ -22,7 +22,7 @@
 
 							<div class="panel radius">
 
-								<div class="row">
+								<!--div class="row">
 									<div class="small-2 columns">
 										<label for="right-label" class="right"> Nome do Arquivo* </label>
 									</div>
@@ -30,10 +30,10 @@
 										<input type="text" name="filename" placeholder="" value="{{field.post_title}}" required>
 										<small class="error">Este campo é obrigatório</small>
 									</div>
-								</div>
+								</div-->
 								<div class="row">
 									<div class="small-2 columns">
-										<label for="right-label" class="right">Nome da variável</label>
+										<label for="right-label" class="right">Nome da variável* </label>
 									</div>
 									<div class="small-10 columns">
 										<input type="text" name="varname" placeholder="" value="{{field.varname}}">
@@ -93,7 +93,7 @@
 
 												<div class="small-12 columns">
 
-													<div class="panel"> 
+													<div class="panel">
 														<div class="row">
 															<div class="small-12 medium-1 columns">Cód</div>
 															<div class="small-12 medium-4 columns">Nome</div>
@@ -145,7 +145,22 @@
 											<label class="right">Qual inciso?</label>
 										</div>
 										<div class="small-10 columns">
-											<input type="text" name="inciso" placeholder="" value="{{field.inciso}}">
+                                            <select name="inciso">
+                                                <optgroup label="Informação pessoal - Art. 4º. III - a proteção da informação sigilosa e da informação pessoal, observada a sua disponibilidade, autenticidade, integridade e eventual restrição de acesso.">
+                                                    <option value="art-4" {% if field.inciso == "art-4" %}checked{% endif %}>Informação pessoal: informação relacionada à pessoa natural identificada ou identificável, relativa à intimidade, vida privada, honra e imagem;</option>
+                                                </optgroup>
+                                                <optgroup label="Informação Classificada - Art. 30. São passíveis de classificação as informações consideradas imprescindíveis à segurança da sociedade ou do Estado, cuja divulgação ou acesso irrestrito possam:">
+                                                <option value="art-30-inciso-1" {% if field.inciso == "art-30-inciso-1" %}checked{% endif %}>I - pôr em risco a defesa e a soberania nacionais ou a integridade do território nacional;</option>
+                                                <option value="art-30-inciso-2" {% if field.inciso == "art-30-inciso-2" %}checked{% endif %}>II - prejudicar ou pôr em risco a condução de negociações ou as relações internacionais do País;</option>
+                                                <option value="art-30-inciso-3" {% if field.inciso == "art-30-inciso-3" %}checked{% endif %}>III - prejudicar ou pôr em risco informações fornecidas em caráter sigiloso por outros Estados e organismos internacionais;</option>
+                                                <option value="art-30-inciso-4" {% if field.inciso == "art-30-inciso-4" %}checked{% endif %}>IV - pôr em risco a vida, a segurança ou a saúde da população;</option>
+                                                <option value="art-30-inciso-5" {% if field.inciso == "art-30-inciso-5" %}checked{% endif %}>V - oferecer elevado risco à estabilidade financeira, econômica ou monetária do País;</option>
+                                                <option value="art-30-inciso-6" {% if field.inciso == "art-30-inciso-6" %}checked{% endif %}>VI - prejudicar ou causar risco a planos ou operações estratégicos das Forças Armadas;</option>
+                                                <option value="art-30-inciso-7" {% if field.inciso == "art-30-inciso-7" %}checked{% endif %}>VII - prejudicar ou causar risco a projetos de pesquisa e desenvolvimento científico ou tecnológico, assim como a sistemas, bens, instalações ou áreas de interesse estratégico nacional, observado o disposto no inciso II do "caput" do artigo 9º deste decreto;</option>
+                                                <option value="art-30-inciso-8" {% if field.inciso == "art-30-inciso-8" %}checked{% endif %}>VIII - pôr em risco a segurança de instituições ou de altas autoridades nacionais ou estrangeiras e seus familiares; ou</option>
+                                                <option value="art-30-inciso-9" {% if field.inciso == "art-30-inciso-9" %}checked{% endif %}>IX - comprometer atividades de inteligência, de investigação ou de fiscalização em andamento, relacionadas com prevenção ou repressão de infrações.</option>
+                                                </optgroup>
+                                            </select>
 										</div>
 									</div>
 
