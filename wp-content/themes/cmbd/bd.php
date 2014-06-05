@@ -16,11 +16,11 @@ $context['post'] = $post;
 // $context['comment_form'] = TimberHelper::get_comment_form();
 
 $context['bdid'] = $_GET['bdid'];
-$context['page_title'] = 'Editar Banco de Dados ID' . $context['bdid'];
+$context['page_title'] = 'ID da base selecionada: ' . $context['bdid'];
 
 
-$context['fields'] = Timber::get_posts( 
-	array( 
+$context['fields'] = Timber::get_posts(
+	array(
 	// 'category' =>  $context['bdid'],
 	'post_type' => 'field',
 	// 'tax_query' => array(
@@ -32,7 +32,7 @@ $context['fields'] = Timber::get_posts(
 	'meta_key' => 'bdid',
 	'meta_value' => $context['bdid'],
 	'order' => 'ASC'
-	) 
+	)
 );
 
 

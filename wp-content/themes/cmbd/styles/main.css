@@ -7,7 +7,7 @@
  * Obs.: O background gerado não é um gradiente, a transição entre as cores é
  * "seca".
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\000037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\000037}}
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -15,7 +15,7 @@ body {
   font-size: 16px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000314}}
 fieldset {
   border: 0 none;
   clear: both;
@@ -23,17 +23,12 @@ fieldset {
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000321}}
-a.alert {
-  color: #f04124 !important;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000321}}
 button.gray, .button.gray {
   background-color: #c5c5c5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000325}}
 .hero-unit {
   margin: 50px auto 0 auto;
   width: 300px;
@@ -44,14 +39,14 @@ button.gray, .button.gray {
   border-radius: 6px;
   padding: 60px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000334}}
 .hero-unit h1 {
   font-size: 60px;
   line-height: 1;
   letter-spacing: -1px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000341}}
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -59,21 +54,21 @@ button.gray, .button.gray {
   padding: 0.2em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000349}}
 .row.bottom {
   margin-bottom: 10px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000352}}
 .row.bottom.double {
   margin-bottom: 20px !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000360}}
 .accordion dd > a {
   position: relative;
   padding: 0.3125rem 1rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000364}}
 .accordion dd > a em {
   display: none;
   font-size: 10px;
@@ -81,7 +76,7 @@ button.gray, .button.gray {
   float: right;
   color: #666;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000372}}
 .accordion dd > a:after {
   color: #999999;
   content: "+";
@@ -89,25 +84,25 @@ button.gray, .button.gray {
   position: absolute;
   right: 24px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000384}}
 .accordion dd.active > a:after {
   content: "-";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\0000396}}
 .type .categories {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\00003103}}
 .type.categoria .categories {
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\00003112}}
 .secrecy .incise {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/dan\/cmbd\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/srv\/www\/dicionario-cmbd\.local\/htdocs\/wp-content\/themes\/cmbd\/assets\/styles\/main\.scss}line{font-family:\00003119}}
 .secrecy.sim .incise {
   display: block;
 }

@@ -14,29 +14,29 @@
 							{% if field %}
 								{{field.post_title}}
 							{% else %}
-								Novo Campo
+								Nova variável
 							{% endif %}
-							<em class="unsaved">Este campo ainda não foi salvo</em>
+							<em class="unsaved">Esta variável ainda não foi salva</em>
 						</a>
 						<div id="panel{{panel_id}}" class="content panel_id {{active}}">
 
 							<div class="panel radius">
 
-								<!--div class="row">
+								<div class="row">
 									<div class="small-2 columns">
-										<label for="right-label" class="right"> Nome do Arquivo* </label>
+										<label for="right-label" class="right"> Nome do Arquivo </label>
 									</div>
 									<div class="small-10 columns">
-										<input type="text" name="filename" placeholder="" value="{{field.post_title}}" required>
-										<small class="error">Este campo é obrigatório</small>
+										<input type="text" name="filename" placeholder="" value="{{field.post_title}}">
+										<small class="error">Esta variável é obrigatório</small>
 									</div>
-								</div-->
+								</div>
 								<div class="row">
 									<div class="small-2 columns">
 										<label for="right-label" class="right">Nome da variável* </label>
 									</div>
 									<div class="small-10 columns">
-										<input type="text" name="varname" placeholder="" value="{{field.varname}}">
+										<input type="text" name="varname" placeholder="Variável do arquivo de dados, tabela ou do arquivo de exportação" value="{{field.varname}}" required>
 									</div>
 								</div>
 								<div class="row">
@@ -65,14 +65,15 @@
 											<option value="valor">Valor</option>
 											<option value="text">Texto</option>
 											<option value="categoria">Categoria</option>
+                                            <option value="data">Data</option>
 											<option value="outro">Outro</option>
 										</select>
 
 									</div>
-									<div class="small-2 columns">
-										<label for="right-label" class="right">Tamanho</label>
+									<div class="small-3 columns">
+										<label for="right-label" class="right">Tamanho<br>(Número de caracteres)</label>
 									</div>
-									<div class="small-4 columns">
+									<div class="small-3 columns">
 										<input type="text" name="size" placeholder="" value="{{field.size}}">
 									</div>
 
@@ -95,7 +96,7 @@
 
 													<div class="panel">
 														<div class="row">
-															<div class="small-12 medium-1 columns">Cód</div>
+															<div class="small-12 medium-1 columns">Código</div>
 															<div class="small-12 medium-4 columns">Nome</div>
 															<div class="small-12 medium-6 columns">Descrição</div>
 															<div class="small-12 medium-1 columns"></div>
@@ -169,7 +170,7 @@
 								<div class="row"> <br></div>
 
 								<div class="row">
-									<div class="small-12 medium-6 columns"><a href="javascript://" class="alert delete-field">Excluir este Campo</a></div>
+									<div class="small-12 medium-6 columns"><a href="javascript://" class="button alert delete-field">Excluir variável</a></div>
 									<div class="small-12 medium-6 text-right columns"><button class="button primary save-field">Salvar</button></div>
 								</div>
 

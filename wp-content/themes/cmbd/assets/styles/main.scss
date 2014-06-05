@@ -2,7 +2,7 @@
 // endbower
 @import "settings";
 // @import "../bower_components/foundation/scss/foundation/functions";
-$alert-color: #F04124;
+//$alert-color: #F04124;
 
 body {
     background: #fafafa;
@@ -16,10 +16,6 @@ fieldset {
     clear: both;
     margin: 0;
     padding: 0;
-}
-
-a.alert {
-    color: $alert-color !important;
 }
 
 button.gray, .button.gray {
@@ -54,7 +50,7 @@ button.gray, .button.gray {
     margin-bottom: 10px !important;
 
     &.double {
-        
+
         margin-bottom: 20px !important;
     }
 }
@@ -87,7 +83,7 @@ button.gray, .button.gray {
             > a {
                 &:after {
                     content: "-";
-                } 
+                }
             }
         }
 
