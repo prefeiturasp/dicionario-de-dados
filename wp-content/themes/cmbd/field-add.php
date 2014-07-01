@@ -27,7 +27,7 @@ $inciso = $_POST['inciso'];
 if (!$field_id) {
 
 	$query = array(
-		'post_title' => "Variável: ".$varname,
+		'post_title' => $filename,
 		'post_status' => 'publish',
 		'post_type' => 'field',
 		'post_category'  => array($bd_id)
@@ -39,7 +39,7 @@ if (!$field_id) {
 
 	$query = array(
 		'ID' => $field_id,
-		'post_title' => "Variável: ".$varname,
+		'post_title' => $filename,
 	);
 
 	$field_id = wp_update_post($query);

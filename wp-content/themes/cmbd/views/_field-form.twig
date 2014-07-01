@@ -12,9 +12,9 @@
 					<dd class="{{active}}">
 						<a href="#panel{{panel_id}}">
 							{% if field %}
-								{{field.post_title}}
+								Arquivo: {{field.post_title}}
 							{% else %}
-								Nova variável
+								Novo Arquivo
 							{% endif %}
 							<em class="unsaved">Esta variável ainda não foi salva</em>
 						</a>
@@ -60,13 +60,13 @@
 										<label for="right-label" class="right">Tipo</label>
 									</div>
 									<div class="small-4 columns">
-										<select name="type" value="{{field.type}}">
+										<select name="type">
 											<option>Escolher...</option>
-											<option value="valor">Valor</option>
-											<option value="text">Texto</option>
-											<option value="categoria">Categoria</option>
-                                            <option value="data">Data</option>
-											<option value="outro">Outro</option>
+											<option {% if field.type == "valor" %} selected="selected"{% endif %} value="valor">Valor</option>
+											<option {% if field.type == "text" %} selected="selected"{% endif %} value="text">Texto</option>
+											<option {% if field.type == "categoria" %} selected="selected"{% endif %} value="categoria">Categoria</option>
+                                            <option {% if field.type == "data" %} selected="selected"{% endif %} value="data">Data</option>
+											<option {% if field.type == "outro" %} selected="selected"{% endif %} value="outro">Outro</option>
 										</select>
 
 									</div>
@@ -135,8 +135,8 @@
 											<label for="right-label" class="right">Sigilo</label>
 										</div>
 										<div class="small-10 columns">
-											<input type="radio" name="secret" value="sim" checked="{{ field.secret == 'sim' }}"><label>Sim</label>
-											<input type="radio" name="secret" value="nao" checked="{{ field.secret == 'nao' or (field.secret is not defined) }}"><label>Não</label>
+											<input type="radio" name="secret" value="sim" {% if field.secret == 'sim' %}checked="checked"{% endif %}><label>Sim</label>
+											<input type="radio" name="secret" value="nao" {% if (field.secret == 'nao') or (field.secret is not defined) %}checked="checked"{% endif %}><label>Não</label>
 										</div>
 
 									</div>
@@ -148,18 +148,18 @@
 										<div class="small-10 columns">
                                             <select name="inciso">
                                                 <optgroup label="Informação pessoal - Art. 4º. III - a proteção da informação sigilosa e da informação pessoal, observada a sua disponibilidade, autenticidade, integridade e eventual restrição de acesso.">
-                                                    <option value="art-4" {% if field.inciso == "art-4" %}checked{% endif %}>Informação pessoal: informação relacionada à pessoa natural identificada ou identificável, relativa à intimidade, vida privada, honra e imagem;</option>
+                                                    <option value="art-4" {% if field.inciso == "art-4" %}selected="selected"{% endif %}>Informação pessoal: informação relacionada à pessoa natural identificada ou identificável, relativa à intimidade, vida privada, honra e imagem;</option>
                                                 </optgroup>
                                                 <optgroup label="Informação Classificada - Art. 30. São passíveis de classificação as informações consideradas imprescindíveis à segurança da sociedade ou do Estado, cuja divulgação ou acesso irrestrito possam:">
-                                                <option value="art-30-inciso-1" {% if field.inciso == "art-30-inciso-1" %}checked{% endif %}>I - pôr em risco a defesa e a soberania nacionais ou a integridade do território nacional;</option>
-                                                <option value="art-30-inciso-2" {% if field.inciso == "art-30-inciso-2" %}checked{% endif %}>II - prejudicar ou pôr em risco a condução de negociações ou as relações internacionais do País;</option>
-                                                <option value="art-30-inciso-3" {% if field.inciso == "art-30-inciso-3" %}checked{% endif %}>III - prejudicar ou pôr em risco informações fornecidas em caráter sigiloso por outros Estados e organismos internacionais;</option>
-                                                <option value="art-30-inciso-4" {% if field.inciso == "art-30-inciso-4" %}checked{% endif %}>IV - pôr em risco a vida, a segurança ou a saúde da população;</option>
-                                                <option value="art-30-inciso-5" {% if field.inciso == "art-30-inciso-5" %}checked{% endif %}>V - oferecer elevado risco à estabilidade financeira, econômica ou monetária do País;</option>
-                                                <option value="art-30-inciso-6" {% if field.inciso == "art-30-inciso-6" %}checked{% endif %}>VI - prejudicar ou causar risco a planos ou operações estratégicos das Forças Armadas;</option>
-                                                <option value="art-30-inciso-7" {% if field.inciso == "art-30-inciso-7" %}checked{% endif %}>VII - prejudicar ou causar risco a projetos de pesquisa e desenvolvimento científico ou tecnológico, assim como a sistemas, bens, instalações ou áreas de interesse estratégico nacional, observado o disposto no inciso II do "caput" do artigo 9º deste decreto;</option>
-                                                <option value="art-30-inciso-8" {% if field.inciso == "art-30-inciso-8" %}checked{% endif %}>VIII - pôr em risco a segurança de instituições ou de altas autoridades nacionais ou estrangeiras e seus familiares; ou</option>
-                                                <option value="art-30-inciso-9" {% if field.inciso == "art-30-inciso-9" %}checked{% endif %}>IX - comprometer atividades de inteligência, de investigação ou de fiscalização em andamento, relacionadas com prevenção ou repressão de infrações.</option>
+                                                <option value="art-30-inciso-1" {% if field.inciso == "art-30-inciso-1" %}selected="selected"{% endif %}>I - pôr em risco a defesa e a soberania nacionais ou a integridade do território nacional;</option>
+                                                <option value="art-30-inciso-2" {% if field.inciso == "art-30-inciso-2" %}selected="selected"{% endif %}>II - prejudicar ou pôr em risco a condução de negociações ou as relações internacionais do País;</option>
+                                                <option value="art-30-inciso-3" {% if field.inciso == "art-30-inciso-3" %}selected="selected"{% endif %}>III - prejudicar ou pôr em risco informações fornecidas em caráter sigiloso por outros Estados e organismos internacionais;</option>
+                                                <option value="art-30-inciso-4" {% if field.inciso == "art-30-inciso-4" %}selected="selected"{% endif %}>IV - pôr em risco a vida, a segurança ou a saúde da população;</option>
+                                                <option value="art-30-inciso-5" {% if field.inciso == "art-30-inciso-5" %}selected="selected"{% endif %}>V - oferecer elevado risco à estabilidade financeira, econômica ou monetária do País;</option>
+                                                <option value="art-30-inciso-6" {% if field.inciso == "art-30-inciso-6" %}selected="selected"{% endif %}>VI - prejudicar ou causar risco a planos ou operações estratégicos das Forças Armadas;</option>
+                                                <option value="art-30-inciso-7" {% if field.inciso == "art-30-inciso-7" %}selected="selected"{% endif %}>VII - prejudicar ou causar risco a projetos de pesquisa e desenvolvimento científico ou tecnológico, assim como a sistemas, bens, instalações ou áreas de interesse estratégico nacional, observado o disposto no inciso II do "caput" do artigo 9º deste decreto;</option>
+                                                <option value="art-30-inciso-8" {% if field.inciso == "art-30-inciso-8" %}selected="selected"{% endif %}>VIII - pôr em risco a segurança de instituições ou de altas autoridades nacionais ou estrangeiras e seus familiares; ou</option>
+                                                <option value="art-30-inciso-9" {% if field.inciso == "art-30-inciso-9" %}selected="selected"{% endif %}>IX - comprometer atividades de inteligência, de investigação ou de fiscalização em andamento, relacionadas com prevenção ou repressão de infrações.</option>
                                                 </optgroup>
                                             </select>
 										</div>
